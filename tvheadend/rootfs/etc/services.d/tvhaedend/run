@@ -1,0 +1,36 @@
+#!/usr/bin/with-contenv bash
+set -e
+set -u
+set -o pipefail
+set -x
+
+LIBSUP="/opt/${HAA_NAME}-support/lib/lib${HAA_NAME}.sh"
+if [ -r "${LIBSUP}" ]; then
+  . "${LIBSUP}"
+fi
+
+
+
+function stop() {
+  echo Signal
+  kill $PID
+}
+
+function main() {
+  # FIXME use stl sh lib..
+  echo "Start ${HAA_NAME}"
+  OPTIONS=${OPTIONS:-""}
+  echo tvheadend -S -C -c /config/tvheadend/ ${OPTIONS} &
+  #tvheadend -S -l /dev/stdout -C -c /config/tvheadend/ &
+  tvheadend -S -C -c /config/tvheadend/ ${OPTIONS} &
+  PID=$!
+  echo -n "$PID" > /tmpfs/.${HAA_NAME}_ready
+  trap "stop" SIGTERM SIGINT
+  trap "" SIGHUP
+
+  wait "$PID"
+  exit $? 
+}
+
+main
+# vim: ft=sh 
