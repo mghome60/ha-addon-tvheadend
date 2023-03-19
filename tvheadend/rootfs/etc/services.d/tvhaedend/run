@@ -19,7 +19,7 @@ function stop() {
 function main() {
   # FIXME use stl sh lib..
   echo "Start ${HAA_NAME}"
-  OPTIONS=${OPTIONS:-""}
+  OPTIONS=${TVH_OPTIONS:-""}
   echo tvheadend -S -C -c /config/tvheadend/ ${OPTIONS} &
   #tvheadend -S -l /dev/stdout -C -c /config/tvheadend/ &
   tvheadend -S -C -c /config/tvheadend/ ${OPTIONS} &

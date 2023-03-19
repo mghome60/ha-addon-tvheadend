@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: lms
+# Community Hass.io Add-ons: TVH
 # Set up env from ha
 # ==============================================================================
 
@@ -14,7 +14,7 @@ function ha_to_env {
   fi
 }
 
-PF="LMS_"
+PF="TVH_"
 
 ha_to_env MOUNT
 ha_to_env TMPFS

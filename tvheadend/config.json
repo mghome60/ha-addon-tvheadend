@@ -1,6 +1,6 @@
 {
-  "name": "Tvheadend",
-  "version": "dev",
+  "name": "TVHeadend",
+  "version": "0.0.1",
   "slug": "tvheadend",
   "description": "TV streaming server and digital video recorder.",
   "url": "https://github.com/pssc/ha-addon-tvheadend/",
