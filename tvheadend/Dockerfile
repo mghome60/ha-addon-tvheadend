@@ -90,13 +90,13 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="Phillip Camp <phillip.camp+ha<removeme>@gmail.com>" \
+    maintainer="OE <oebacau@gmail.com>" \
     org.label-schema.description="TV streaming server and digital video recorder." \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name="tvheadend" \
     org.label-schema.schema-version="1.0" \
-    org.label-schema.usage="https://github.com/pssc/ha-addon-tvheadend/tree/master/README.md" \
+    org.label-schema.usage="https://github.com/mghome60/ha-addon-tvheadend/tree/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/pssc/ha-addon-tvheadend" \
-    org.label-schema.vendor="pssc"
+    org.label-schema.vcs-url="https://github.com/mghome60/ha-addon-tvheadend" \
+    org.label-schema.vendor="mghome60"
 #    org.label-schema.url="https://community.home-assistant.io/t/home-assistant-community-add-on-portainer/68836?u=frenck" \
